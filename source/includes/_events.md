@@ -100,3 +100,21 @@ Parameter    | Type   | Description
 ------------ | ------ | -----------
 moveName     | string | Name of the move that can be learned.
 pokemonIndex | number | Index of the pokémon learning the new move.
+
+## onWarningMessage
+
+```lua
+function onWarningMessage(isDifferentMap, distance)
+```
+
+Called when PROShine logs a warning message, and provides information about the message.
+
+Warnings can be falsely emitted due to lag or scripted game events that teleport you (namely elevators).
+
+
+### PARAMETERS
+
+Parameter      | Type   | Description
+---------------|--------|------------
+isDifferentMap | bool   | Indicates whether you changed map unexpectedly.
+distance       | number | Number of tiles you were moved unexpectedly.
